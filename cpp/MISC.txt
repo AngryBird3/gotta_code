@@ -1,0 +1,27 @@
+######## +Inf:
+
+Python: float('inf')
+or ii32 = np.iinfo(np.int32) ... ii32.max
+vs CPP:
+INT_MAX
+
+
+######## -INF:
+Python: -float('inf')
+
+vs CPP:
+INT_MIN
+
+####### NULL <data structure>
+Python: ""/list()/dict()/deque() etc
+
+vs CPP:
+string()/vector<type>()/unordered_map<key_type, val_type>(), deque<type>() etc
+
+
+######## NULL
+#include <stddef.h> for NULL
+
+
+######## Algorithm
+std::sort (myvector.begin(), myvector.begin()+4);

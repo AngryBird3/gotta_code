@@ -1,0 +1,85 @@
+*******
+Vector:
+*******
+Use it as when you need list in python. 
+It doesn't need to know size (but good to know)
+
+The elements are stored contiguously, which means that elements can be accessed not 
+only through iterators, but also using offsets on regular pointers to elements. This 
+means that a pointer to an element of a vector may be passed to any function that 
+expects a pointer to an element of an array.
+
+Time complexity:
+Random access - constant O(1)
+Insertion or removal of elements at the end - amortized constant O(1)
+Insertion or removal of elements - linear in distance to the end of the vector O(n)
+
+########### constructing vectors
+#include <iostream>
+#include <vector>
+using namespace std;
+
+Python: a = list()
+
+vs CPP:
+vector<string> a; //No size
+vector<int> a(4,0); //Len: 4, init with: 0
+vector<int> a(b); //copy of b
+
+vector<int> b;
+b.reserve(10); /// Creating vector of len 10
+
+int myint[] = {16,2,77,29};
+vector<int> a(myints, myints + sizeof(myints) / sizeof(int) );
+
+
+########### insert at back
+Python: a.append(1)
+
+vs CPP:
+a.push_back(1)
+
+########### Find
+Python: if 1 in a:
+			print "exists"
+
+vs CPP:
+if (find(a.begin(), a.end(), 1) != a.end())
+	cout << "Exists" 
+
+
+########### Erase by val
+Python: a.remove('a')
+
+vs CPP:
+vector<int>::iterator it;
+it = find(a.begin(), a.end(), 1);
+a.erase(it);
+
+########### Sorting vector
+Python: sort(a)
+
+vs CPP:
+std::sort (myvector.begin(), myvector.begin()+4);
+
+########### Iterate through
+Python:
+for i in (a):
+	print a[i]
+or 
+for n in nums:
+	print n
+
+vs CPP:
+vector<int>::iterator i;
+for (i = a.begin(); i != a.end(); i++)
+	cout << *i;
+
+########## Iterate through 2d vector
+vector<vector<int> > a;
+
+for(row = vec2d.begin(); row != vec2d.end(); row++) {
+	for(col = row->begin(); col != row->end(); col++) {
+		data.push_back(*col);
+	}   
+}   

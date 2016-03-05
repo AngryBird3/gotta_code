@@ -1,0 +1,77 @@
+*************
+Creating hash:
+*************
+
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std;
+
+##### Declaring: 
+Python: indices = {} #{'a': []}
+
+unordered_map <char, deque<int>> indices; 
+
+##### Inserting into hash:
+Python: indices['a'] = []
+
+vs CPP:
+indices['a'] = deque<int>();
+
+or:
+
+Python: mymap = {'milk':2.30, 'potatoes':1.90, 'eggs':0.40}
+
+vs CPP:
+std::unordered_map<std::string,double> mymap = {
+       {"milk",2.30},
+       {"potatoes",1.90},
+       {"eggs",0.40}
+	};
+
+
+###### Element exists:
+Python: if 'a' in indices:
+			print "exists"
+
+
+vs CPP:
+if (indices.find('a') != indices.end())
+	cout << "Exists";
+
+std::unordered_map<std::string,double>::const_iterator got = mymap.find (input);
+
+  if ( got == mymap.end() )
+    std::cout << "not found";
+
+
+###### Len:
+Python: len(indices)
+
+vs CPP:
+indices.size()
+
+
+##### Delete key:
+Python: del indices['a']
+
+vs CPP:
+indices.remove('a')
+
+// more erase examples:
+  mymap.erase ( mymap.begin() );      // erasing by iterator
+  mymap.erase ("France");             // erasing by key
+  mymap.erase ( mymap.find("China"), mymap.end() ); // erasing by range
+
+
+##### Iterator through key/val
+##### Get list of keys and values:
+
+for(std::unordered_map<char,deque<int> >::iterator iter = indices.begin(); iter != indices.end(); ++iter) 
+{   
+	//char key = iter->first;
+	deque<int> val = iter->second;
+	maxm = max(val.back(), maxm);
+	minm = min(val.front(), minm);
+}   
+
