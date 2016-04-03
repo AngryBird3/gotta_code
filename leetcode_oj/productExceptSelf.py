@@ -14,9 +14,35 @@ class Solution(object):
 		:type nums: List[int]
 		:rtype: List[int]
 		"""
+
+		'''
+		Algorithm:
+		(Note this is how I solved first)
+		res = [(1,1)]*n
+		for i in range(1,n):
+			res[i][0] = res[i-1][0] * num[i-1]
+		for i in range(n-1-1, -1, -1):
+			res[i][1] = res[i+1][1] * num[i+1]
+		for i in range(n):
+			output[i] = res[i][0] * res[i][1] 
+		'''
 		n = len(nums)
 		if n <= 0: 
 			return [1]
-
+		res = [1] * n
 		#Left
-		for i 
+		for i in range(1, n):
+			res[i] = res[i-1] * nums[i-1]
+		
+		#right
+		right = 1
+		for i in range(n-1-1, -1, -1):
+			res[i] = res[i] * nums[i+1] * right
+			right = right * nums[i+1]
+
+		return res
+
+s = Solution()
+nums = [1, 5]
+res = s.productExceptSelf(nums)
+print res
