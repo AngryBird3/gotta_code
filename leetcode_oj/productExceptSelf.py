@@ -17,12 +17,15 @@ class Solution(object):
 
 		'''
 		Algorithm:
-		(Note this is how I solved first)
+		(Note: this is how I solved first)
 		res = [(1,1)]*n
+		#left:
 		for i in range(1,n):
 			res[i][0] = res[i-1][0] * num[i-1]
+		#right:
 		for i in range(n-1-1, -1, -1):
 			res[i][1] = res[i+1][1] * num[i+1]
+		#Finally
 		for i in range(n):
 			output[i] = res[i][0] * res[i][1] 
 		'''

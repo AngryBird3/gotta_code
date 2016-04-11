@@ -50,8 +50,8 @@ class Solution:
 
 		for v in graph[u]: 
 			if v not in visited:
-				if u == 1:
-					print v
+				#if u == 1:
+				#	print v
 				level[l].append(v)
 				visited.add(v)
 				self.print_level(v, graph, l+1, level, visited)

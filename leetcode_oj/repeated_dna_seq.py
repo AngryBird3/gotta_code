@@ -1,3 +1,5 @@
+#https://leetcode.com/discuss/74330/20-ms-solution-c-with-explanation
+#https://leetcode.com/discuss/29419/my-concise-solution-with-c
 import hashlib
 class Solution:
     # @param s, a string
