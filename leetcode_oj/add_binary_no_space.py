@@ -11,6 +11,7 @@ def add_binary(s1, s2):
 	result = ""
 	for i in range(len(s1) - 1 , -1, -1):
 		r = int(s1[i]) + int(s2[i]) + c
+		# No need to do if/else. carry = r/2; r = r%2
 		if r == 0:
 			result = "0" + result
 			c = 0

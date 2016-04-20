@@ -33,11 +33,14 @@ public:
 	 * Why dont you try?
 	 * [1,2] => [1], [2], [1,2]
 	 * [1,2,3,4] => [1], [2], [3], [4], [1, 2], .. [1,2,3] ... [2,3,4] .. [1,2,3,4]
+	 * Another: You need to build all possible sum [n] with those num
+	 *	https://leetcode.com/discuss/82822/solution-explanation
 	 */
     int minPatches(vector<int>& nums, int n) {
     	int count = 0;
 		int i = 0;
 		int missing;
+		long total = 0;
 		//for (i = 0; i < n; i++) {
 		while (total < n) {
 			// If ith number is == total/total+1 
@@ -51,7 +54,7 @@ public:
 				total += missing;
 				count++;
 			}
-			printf("Total: %d\n", total);
+			printf("Total: %ld\n", total);
 		}
 		return count; 
     }
@@ -59,7 +62,7 @@ public:
 
 int main() {
 	Solution sol;
-	vector<int> a {2, 2, 2};
-	printf("%d\n", sol.minPatches(a, 7));
+	vector<int> a {1,5,10};
+	printf("%d\n", sol.minPatches(a, 20));
 	return 0;
 }

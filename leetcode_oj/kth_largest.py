@@ -17,6 +17,7 @@ class Solution:
 			pivot = (r + l)/2
 			print "pitvot: ", pivot
 			pos = self.partition(nums, l, r, pivot)
+			print pivot
 			print "pos: ", pos
 			if (pos == k):
 				return nums[pos];

@@ -37,8 +37,8 @@ public:
 		b = slow->next;
 		a = head;
 		slow->next = NULL;
-		print_list(a);
-		print_list(b);
+		//print_list(a);
+		//print_list(b);
 		ListNode *ha = sortList(a);
 		ListNode *hb = sortList(b);
 
@@ -84,7 +84,7 @@ public:
 		ListNode* new_head = NULL;
 		ListNode* prev = NULL;
 		ListNode* head = NULL;
-		while(a || b) {
+		while(a && b) {
 			if (b->val < a->val) {
 				head = b;
 			} else {

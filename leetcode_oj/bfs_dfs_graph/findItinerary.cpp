@@ -20,7 +20,7 @@ Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"]. But it
 #include <set>
 using namespace std;
 class Solution {
-	unordered_map<string, set<string> > graph;
+	unordered_map<string, set<string> > graph; //multiset, as edge repeats
 public:
     vector<string> findItinerary(vector<pair<string, string> > tickets) {
     	// Create graph
