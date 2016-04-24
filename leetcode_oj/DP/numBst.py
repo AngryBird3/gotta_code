@@ -9,6 +9,7 @@ Given n = 3, there are a total of 5 unique BST's.
      3     2     1      1   3      2
     /     /       \                 \
    2     1         2                 3
+https://www.youtube.com/watch?v=YDf982Lb84o
 '''
 class Solution(object):
     def numTrees(self, n):
@@ -23,6 +24,9 @@ class Solution(object):
 		# on left side and uniq BST on right side, "combine left each
 		# with righ each" hence cartesian product)
 
+		#Inner loop is clculating for every n = i, what would be
+		#Total number of trees.
+		#So j will take root as 1 to i
 		#opt[i] = # of uniq BST
 		if n <= 1:
 			return 1
