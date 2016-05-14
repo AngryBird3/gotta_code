@@ -1,3 +1,18 @@
+'''
+All DNA is composed of a series of nucleotides abbreviated as A, C, G, and T, for example: "ACGAATTCCG". When studying DNA, it is sometimes useful to identify repeated sequences within the DNA.
+
+Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.
+
+For example,
+
+Given s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT",
+
+Return:
+["AAAAACCCCC", "CCCCCAAAAA"].
+Hide Company Tags LinkedIn
+Hide Tags Hash Table Bit Manipulation
+Difficulty: Medium
+'''
 #https://leetcode.com/discuss/74330/20-ms-solution-c-with-explanation
 #https://leetcode.com/discuss/29419/my-concise-solution-with-c
 import hashlib

@@ -14,6 +14,11 @@ Given board =
 word = "ABCCED", -> returns true,
 word = "SEE", -> returns true,
 word = "ABCB", -> returns false.
+
+Microsoft Bloomberg Facebook
+Hide Tags Array Backtracking
+Hide Similar Problems (H) Word Search II
+Difficulty: Medium
 '''
 class Solution:
     # @param {character[][]} board

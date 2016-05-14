@@ -9,6 +9,7 @@ For example,
 Note:
 Given n will always be valid.
 Try to do this in one pass.
+Difficulty: Easy
 '''
 # Definition for singly-linked list.
 class ListNode:

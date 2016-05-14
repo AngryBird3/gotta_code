@@ -19,6 +19,11 @@ Algorithm:
 
 Similar to leetcode, Traverse pre-order, adding # for
 NULL child
+Difficulty: Hard
+ LinkedIn Google Uber Facebook Amazon Microsoft Yahoo Bloomberg
+Hide Tags Tree Design
+Hide Similar Problems (M) Encode and Decode Strings
+
 '''
 import collections
 # Definition for a binary tree node.
@@ -57,7 +62,7 @@ class Codec:
 
 		:type data: str
 		:rtype: TreeNode
-		"""	
+		"""
 		val = data.split(Codec.SEPARATOR)
 		q = collections.deque(val)
 		return self._helper_d(q)
@@ -67,13 +72,12 @@ class Codec:
 		if val == Codec.NULL_VAL:
 			return None
 		node = TreeNode(val)
-		#print "node: ", node.val
-		#print "left q: ", q
+		print "node: ", node.val, " left q: ", q
 		node.left = self._helper_d(q)
-		#print "right q: ", q
+		print "node: ", node.val, " right q: ", q
 		node.right = self._helper_d(q)
 		return node
-				
+
 def level_order(root):
 	if not root:
 		return
@@ -88,11 +92,9 @@ def level_order(root):
 				q.append(node.left)
 			if node.right:
 				q.append(node.right)
-			
-		print ""	
+		print ""
 # Your Codec object will be instantiated and called as such:
 codec = Codec()
-'''
 t1 = TreeNode(1); t2 = TreeNode(2); t3 = TreeNode(3)
 t4 = TreeNode(4); t5 = TreeNode(5)
 
@@ -101,5 +103,6 @@ t3.left = t4; t3.right = t5
 '''
 tn1 = TreeNode(-1); t0 = TreeNode(0); t1 = TreeNode(1)
 tn1.left = t0; tn1.right = t1;
-new_root = codec.deserialize(codec.serialize(tn1))
+'''
+new_root = codec.deserialize(codec.serialize(t1))
 level_order(new_root)

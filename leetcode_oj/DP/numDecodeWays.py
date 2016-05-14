@@ -11,6 +11,10 @@ For example,
 Given encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
 
 The number of ways decoding "12" is 2.
+Difficulty: Medium
+ Microsoft Uber Facebook
+Hide Tags Dynamic Programming String
+
 '''
 class Solution(object):
     def numDecodings(self, s):

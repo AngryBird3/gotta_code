@@ -8,6 +8,10 @@ s = "catsanddog",
 dict = ["cat", "cats", "and", "sand", "dog"].
 
 A solution is ["cats and dog", "cat sand dog"].
+ Dropbox Google Uber Snapchat Twitter
+Hide Tags Dynamic Programming Backtracking
+
+Difficulty: Hard
 '''
 class Solution(object):
 	def wordBreak(self, s, wordDict):

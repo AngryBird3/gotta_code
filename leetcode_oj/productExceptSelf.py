@@ -7,6 +7,11 @@ For example, given [1,2,3,4], return [24,12,8,6].
 
 Follow up:
 Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)
+ Amazon LinkedIn Apple Facebook Microsoft
+Hide Tags Array
+Hide Similar Problems (H) Trapping Rain Water (M) Maximum Product Subarray (H) Paint House II
+
+Difficulty: Medium
 '''
 class Solution(object):
 	def productExceptSelf(self, nums):

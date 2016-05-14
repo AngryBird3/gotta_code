@@ -7,6 +7,7 @@ Return the starting gas station's index if you can travel around the circuit onc
 
 Note:
 The solution is guaranteed to be unique.
+Difficulty: Medium
 '''
 class Solution(object):
     def canCompleteCircuit(self, gas, cost):

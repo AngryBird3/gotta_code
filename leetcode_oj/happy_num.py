@@ -9,6 +9,10 @@ Example: 19 is a happy number
 8^2 + 2^2 = 68
 6^2 + 8^2 = 100
 1^2 + 0^2 + 0^2 = 1
+Uber Airbnb Twitter
+Hide Tags Hash Table Math
+Hide Similar Problems (E) Add Digits (E) Ugly Number
+
 '''
 class Solution:
     # @param {integer} n

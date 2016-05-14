@@ -5,6 +5,7 @@ You must do this in-place without altering the nodes' values.
 
 For example,
 Given {1,2,3,4}, reorder it to {1,4,2,3}.
+Difficulty: Medium
 '''
 # Definition for singly-linked list.
 class ListNode(object):
@@ -22,7 +23,7 @@ class Solution(object):
 		Algorithm:
 
 		l0 l1 l2 l3 l4 l5 l6 l7
-		1) Find middle element : l3
+		1) Find middle element : l4
 		2) Reverse last half:
 			l0 l1 l2 l3   l7 l6 l5
 		3) Some how join how it requires!

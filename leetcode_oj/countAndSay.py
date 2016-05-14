@@ -32,8 +32,10 @@ class Solution(object):
 	def countAndSay2(self, n):
 		import re
 		s = "1"
-		for i in range(1, n)
-			#re.findall(r'((.)\2*)',s)	
+		for i in range(1, n):
+			counts, repeating = re.findall(r'((.)\2*)',s)[0]
+			s = str(len(counts)) + str(repeating)	
+		return s
 
 s = Solution()
-print s.countAndSay(3)
+print s.countAndSay2(3)

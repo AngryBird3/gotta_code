@@ -11,6 +11,12 @@ Return
   [1,3,3,1],
  [1,4,6,4,1]
 ]
+
+Apple Twitter
+Hide Tags Array
+Hide Similar Problems (E) Pascal's Triangle II
+
+Difficulty: Easy
 '''
 class Solution(object):
     def generate(self, numRows):
