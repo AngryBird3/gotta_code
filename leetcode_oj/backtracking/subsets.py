@@ -17,6 +17,12 @@ class Solution(object):
             if i != start and nums[i] == nums[i-1]:
                 continue
             temp.append(nums[i])
+            #print "start: ", start, " nums[i]: ", nums[i], " temp: ", temp, " i: ", i
             self.helper(nums, i+1, temp)
+            #print "start: ", start, "poping ...: ", temp[-1], " temp: ", temp, " i: ", i
             temp.pop()
             
+s = Solution()
+nums = ['a','b','c']
+res = s.subsetsWithDup(nums)
+print "res: ", res

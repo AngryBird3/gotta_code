@@ -25,13 +25,13 @@ class Solution(object):
         """
 
 		'''
-		Algorithm: 
+		Algorithm:
 		Here we don't have space between str char, so we
 		don't know what pattern char can match in string
 		count be 0.. n len string
 
 		That reminds me backtracking.
-		Base case: 
+		Base case:
 		if not pattern and not s: we're done
 		if not pattern and s: we're done
 
