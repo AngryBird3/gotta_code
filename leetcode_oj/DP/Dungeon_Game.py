@@ -27,6 +27,48 @@ Hide Company Tags Microsoft
 Hide Tags Binary Search Dynamic Programming
 Hide Similar Problems (M) Unique Paths (M) Minimum Path Sum
 Difficulty: Hard
+
+Notes:
+-2   -3   3
+-5   -10  1
+10    30  -5
+
+
+Think like power vs sweat .
+We need to calculate positive power at right most last corner to reach to Princess
+
+We'll start from there, To calculate how much power I need at there.
+
+Then I can go ONLY up or left (As Knight can move right or down)
+
+So from last. Start filling.
+
+?,?,?
+?,?,?
+?,?,6
+
+For last row: we can only move FROM right.
+So opt[i][j] = Minimum HP(power) needed to reach from [i][j] to [m][n]
+
+Ok. So last row.
+sweat = dungeon
+opt[m][j] = max(opt[i][j+1] - sweat[i][j], 1)
+max cause say 6 - 30. Is minimum, but power has to be positive -- at least 1
+
+
+For Last column, same thing. Only come from down.
+opt[i][n] = max(opt[i-1][n] - sweat[i][j], 1)
+
+?,?,2
+?,?,5
+1,1,6
+
+For others its minimum of those two :
+min(right, down)
+
+7,5,2
+6,11,5
+1,1,6
 '''
 class Solution(object):
     def calculateMinimumHP(self, dungeon):
