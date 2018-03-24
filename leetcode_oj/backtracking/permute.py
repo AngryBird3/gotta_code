@@ -6,23 +6,25 @@ For example,
 [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], and [3,2,1].
 '''
 class Solution(object):
-	def permute(self, nums):
-		"""
-		:type nums: List[int]
-		:rtype: List[List[int]]
-		"""
-		self.res = list()
-		self.helper(nums)
-		return self.res
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        self.res = list()
+        self.helper(nums)
+        return self.res
 
-	def helper(self, nums, temp=list()):
-		if not nums:
-			self.res.append(temp[:])
+    def helper(self, nums, temp=list()):
+        if not nums:
+            self.res.append(temp[:])
 
-		for i in range(len(nums)):
-			temp.append(nums[i])
-			self.helper(nums[:i]+nums[i+1:], temp)
-			temp.pop()
+        for i in range(len(nums)):
+            temp.append(nums[i])
+            print "i: ", i, " After push: ", temp, " res: ", self.res, " nums: ", nums
+            self.helper(nums[:i]+nums[i+1:], temp)
+            temp.pop()
+            print "i: ", i, " After pop: ", temp, " res: ", self.res, " nums: ", nums
 
 s = Solution()
 print s.permute([1,2,3])

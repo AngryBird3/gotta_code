@@ -1,3 +1,4 @@
+#!/usr/bin/python
 '''
 Find the least common ancestor in binary tree
 '''
@@ -42,24 +43,39 @@ class Solution:
 		if (t.l and self.find_path(t.l, n, path)) or (t.r and self.find_path(t.r, n, path)):
 			return True
 
-		path.pop()	
+		path.pop()
 		return False
 
+	def lowestCommonAncestor(self, root, p, q):
+		if not root:
+			return None
+		if root == p or root == q:
+			return root
+
+		matching_left = self.lowestCommonAncestor(root.l, p, q)
+		matching_right = self.lowestCommonAncestor(root.r, p, q)
+
+		print "root : ", root.val, " m_l: ", matching_left.val if matching_left else "None", \
+		" m_r: ", matching_right.val if matching_right else "None"
+
+		#If both match, root is LCA
+		if matching_left and matching_right:
+		    return root
+
+		#Found both the node on one side
+		return matching_left if matching_left else matching_right
+
 s = Solution()
-'''
-t51 = TreeNode(51, None, None)
-t52 = TreeNode(52, None, None)
+
+t8 = TreeNode(8, None, None)
+t0 = TreeNode(0, None, None)
+t1 = TreeNode(1, t0, t8)
+
 t4 = TreeNode(4, None, None)
-t5 = TreeNode(5, t51, t52)
-t6 = TreeNode(6, None, None)
 t7 = TreeNode(7, None, None)
-t2 = TreeNode(2, t4, t5)
-t3 = TreeNode(3, t6, t7)
-t1 = TreeNode(1, t2, t3)
-'''
-t0 = TreeNode(0)
-t3 = TreeNode(3)
-t1 = TreeNode(1, t0)
-t2 = TreeNode(2, t1, t3)
-root = TreeNode(4, t2)
-print s.findAncestor(root, 1, 2)
+t2 = TreeNode(2, t7, t4)
+t6 = TreeNode(6, None, None)
+t5 = TreeNode(5, t6, t2)
+root = TreeNode(3, t5, t1)
+
+print s.lowestCommonAncestor(root, t6, t4)

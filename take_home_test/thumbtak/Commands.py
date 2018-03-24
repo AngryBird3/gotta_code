@@ -1,0 +1,12 @@
+# known commands for our in-memory database
+BEGIN = "BEGIN"
+COMMIT = "COMMIT"
+END = "END"
+ROLLBACK = "ROLLBACK"
+SET = "SET"
+GET = "GET"
+UNSET = "UNSET"
+NUMEQUALTO = "NUMEQUALTO"
+KNOWN_COMMANDS = {BEGIN: 1, END: 1, COMMIT: 1, ROLLBACK: 1,
+				  SET: 1, GET: 1, UNSET: 1, NUMEQUALTO: 1}
+	

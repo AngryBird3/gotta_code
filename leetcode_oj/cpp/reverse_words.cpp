@@ -7,12 +7,15 @@ public:
         int n = s.length() - 1;
         reverse(s, 0, n);
         int i, start = 0;
+        cout << s << "\n";
         for (i = 0; i < n; i++) {
             if (isspace(s[i])) {
                 reverse(s, start, i-1);
                 start = i+1;
+                //cout << s << "\n";
             }
         } 
+        cout << s << "\n";
 		reverse(s, start, n);
     }
     
@@ -29,8 +32,8 @@ public:
 
 int main() {
 	Solution s;
-	//string str("the sky is blue");
-	string str("a b");
+	string str("the sky is blue");
+	//string str("a b");
 	s.reverseWords(str);
 	printf("Revsersed string : %s\n", str.c_str());
 	return 0;

@@ -1,0 +1,83 @@
+-----------
+How to run?
+-----------
+
+There are two ways to run it, a) one through command line
+new word - new line, read till ctrl-d b) Read from file
+
+It spitts each word going through on screen.
+
+Example run:
+Dharas-MacBook-Air:NodePrime dharadarji$ python compound_word.py 
+usage: compound_word.py [-h] [--file_name FILE_NAME] [--c]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --file_name FILE_NAME
+                        Input file name (with fullpath)
+  --c                   Input words through command line till ctrl-d
+Dharas-MacBook-Air:NodePrime dharadarji$ 
+
+a)
+Dharas-MacBook-Air:NodePrime dharadarji$ python compound_word.py --c
+soft
+ware
+engineer
+softwareengineer
+.... word:  soft
+.... word:  ware
+.... word:  engineer
+.... word:  softwareengineer
+Longest compound word is:  softwareengineer
+Dharas-MacBook-Air:NodePrime dharadarji$ 
+b)
+Dharas-MacBook-Air:NodePrime dharadarji$ python compound_word.py --file word.list.txt 
+..... (after lots of words)
+.... word:  zymurgic
+.... word:  zymurgies
+.... word:  zymurgy
+.... word:  zythum
+.... word:  zythums
+.... word:  zyzzyva
+.... word:  zyzzyvas
+.... word:  zzz
+Longest compound word is:  pneumonoultramicroscopicsilicovolcanoconiosis
+------------
+How it works
+------------
+There are two files:
+trie.py: Implementing trie data structure, having search method
+compound_word.py: This is the main file
+
+While reading input I create trie. Inserting operation time
+complexity:  O(w*l). Searching a word: O(l). where w is # of
+words and l is average length of a word.
+
+To find if a word is compound ..
+
+is_compound(w):
+for i = 1 to l: <<<O(l)
+   if search(word[:i) and is_compound(word[i:]):
+		Then true
+ 
+String:
+s1, s2, s3,  ..., sk, sk+1, ..., sl-2, sl-1, sl
+
+I'm looking if s[i..k] is word in trie, then if either
+rest of the string (k+1, .. l) is a word or again
+it's a compound word.
+
+Time complexity:
+(trie) search complexity: O(l)
+T(l) = l^2  + T(l-1)
+T(l) = l^2 + (l-1)^2 + T(l-2)
+...
+T(l) = l^2 + (l-1)^2 + (l-2)^2 + ... + 1
+T(l) = 1^2 + 2^2 + 3^2 + ... + (l-2)^2 + (l-1)^2 + l^2
+T(l) = l(l+1)(2l+1)/6
+
+.. O(l^3)
+
+Hence for finding Longest compound word among
+list of words (say n), time complexity = O(n*l^3)
+ 

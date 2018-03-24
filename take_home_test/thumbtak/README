@@ -1,0 +1,30 @@
+CommandParser.py:
+	* What does it do?
+	- Read one line (or command)
+	* Assumption:
+
+Execute.py:
+	* What does it do?
+	- Parse raw string command
+	- Issue execute operation/Command
+	* Assumption:
+	- Assuming commands are case sensitive; hence discarding what not 
+	  I don't recognize (KNOWN_COMMANDS)
+	- If there are more arguments than expected; ignore
+	- If the command isn't complete - or in other words less arguments 
+	  then don't do anything - ignore that command	
+
+Database.py
+	* What does it do?
+	- Store data (key/value), keep list of transactions which are not
+	  committed (top one being latest/current)
+	* Assumption
+	- Commit/Rollback:
+		- If we don't have any open transaction, it will simply return
+	      (after printing NO TRANSACTION)
+	- Get:
+		If no open transaction then read from database
+	- Set:
+		If no open transaction then assume we've opened one
+	- Unset:
+		if no open transaction then unset from database

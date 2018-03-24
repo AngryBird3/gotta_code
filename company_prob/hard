@@ -1,0 +1,75 @@
+65	Valid Number	12.1%		Hard	
+126	Word Ladder II	13.7%		Hard	
+149	Max Points on a Line	14.3%		Hard	
+146	LRU Cache	15.8%		Hard	
+68	Text Justification	16.2%		Hard	
+44	Wildcard Matching	17.6%		Hard	
+4	Median of Two Sorted Arrays	18.7%		Hard	
+273	Integer to English Words	18.8%		Hard	
+335	Self Crossing	19.5%		Hard	
+212	Word Search II	19.6%		Hard	
+336	Palindrome Pairs	19.7%		Hard	
+214	Shortest Palindrome	19.9%		Hard	
+140	Word Break II	19.9%		Hard	
+174	Dungeon Game	20.9%		Hard	
+30	Substring with Concatenation of All Words	20.9%		Hard	
+321	Create Maximum Number	21.0%		Hard	
+76	Minimum Window Substring	21.3%		Hard	
+308	Range Sum Query 2D - Mutable 	21.5%		Hard	
+132	Palindrome Partitioning II	21.8%		Hard	
+10	Regular Expression Matching	22.1%		Hard	
+295	Find Median from Data Stream	22.2%		Hard	
+218	The Skyline Problem	22.3%		Hard	
+224	Basic Calculator	22.4%		Hard	
+188	Best Time to Buy and Sell Stock IV	22.4%		Hard	
+135	Candy	22.5%		Hard	
+32	Longest Valid Parentheses	22.5%		Hard	
+97	Interleaving String	22.6%		Hard	
+269	Alien Dictionary 	23.2%		Hard	
+158	Read N Characters Given Read4 II - Call multiple times 	23.4%		Hard	
+124	Binary Tree Maximum Path Sum	23.4%		Hard	
+23	Merge k Sorted Lists	23.5%		Hard	
+85	Maximal Rectangle 	23.6%		Hard	
+57	Insert Interval	23.9%		Hard	
+41	First Missing Positive	23.9%		Hard	
+84	Largest Rectangle in Histogram 	24.2%		Hard	
+233	Number of Digit One	24.7%		Hard	
+282	Expression Add Operators	25.0%		Hard	
+37	Sudoku Solver	25.1%		Hard	
+316	Remove Duplicate Letters	25.2%		Hard	
+45	Jump Game II	25.3%		Hard	
+56	Merge Intervals	25.5%		Hard	
+138	Copy List with Random Pointer	26.1%		Hard	
+51	N-Queens	26.1%		Hard	
+123	Best Time to Buy and Sell Stock III	26.4%		Hard	
+327	Count of Range Sum	26.5%		Hard	
+99	Recover Binary Search Tree	26.6%		Hard	
+87	Scramble String	26.6%		Hard	
+164	Maximum Gap	26.8%		Hard	
+248	Strobogrammatic Number III 	27.1%		Hard	
+239	Sliding Window Maximum	27.7%		Hard	
+25	Reverse Nodes in k-Group	27.7%		Hard	
+297	Serialize and Deserialize Binary Tree	28.0%		Hard	
+72	Edit Distance	28.7%		Hard	
+115	Distinct Subsequences	28.9%		Hard	
+33	Search in Rotated Sorted Array	30.4%		Hard	
+315	Count of Smaller Numbers After Self	30.8%		Hard	
+317	Shortest Distance from All Buildings 	31.4%		Hard	
+329	Longest Increasing Path in a Matrix	31.9%		Hard	
+301	Remove Invalid Parentheses	32.1%		Hard	
+128	Longest Consecutive Sequence	32.3%		Hard	
+42	Trapping Rain Water	32.4%		Hard	
+117	Populating Next Right Pointers in Each Node II	32.8%		Hard	
+272	Closest Binary Search Tree Value II 	33.5%		Hard	
+154	Find Minimum in Rotated Sorted Array II	34.4%		Hard	
+305	Number of Islands II 	34.6%		Hard	
+159	Longest Substring with At Most Two Distinct Characters 	35.1%		Hard	
+291	Word Pattern II 	35.2%		Hard	
+145	Binary Tree Postorder Traversal	35.6%		Hard	
+265	Paint House II 	35.7%		Hard	
+312	Burst Balloons	36.9%		Hard	
+340	Longest Substring with At Most K Distinct Characters 	37.2%		Hard	
+287	Find the Duplicate Number	38.9%		Hard	
+302	Smallest Rectangle Enclosing Black Pixels 	39.3%		Hard	
+52	N-Queens II	39.5%		Hard	
+296	Best Meeting Point 	47.1%		Hard	

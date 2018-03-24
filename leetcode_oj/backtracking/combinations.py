@@ -30,9 +30,10 @@ class Solution:
 
 		for i in range(start, n):
 			temp.append(i+1)
-			#print "i+1: ", i+1, " start: ", start, " temp: ", temp
+			print "i+1: ", i+1, " start: ", start, " temp: ", temp
 			self.helper(i+1, n, k, temp)
 			temp.pop()
+			print "After pop, i+1: ", i+1, " start: ", start, " temp: ", temp
 
 s = Solution()
 print s.combine(3, 2)

@@ -1,0 +1,17 @@
+File indexing1:
+This class is responsible for creating index
+Algorithm:
+	I used same approach which I used in my class for Information Retrieval
+	to create index and apply searching models(vector/language)
+	Go through each alphabet and read word start with that
+	Write freq info into index file
+	Write where we can find <term> in index file in catalog file (to 'seek' in future)
+
+File get_term_freq:
+This class is just interface:
+In init I create indexing if in current directory index_file, catalog_file
+doesn't exists ..  THis should be improved - when to create indexing
+
+File Solution:
+This is the interface for 'test'
+It requires a<string> argument to provide term freq for
